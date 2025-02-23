@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stonex</title>
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+}
+nav{
+    height: 13vh;
+    background-color: #CBE4DE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img img {
+    width: 15vw;
+    padding-top: 1rem;
+}
+.nav-item ul{
+    display: flex;
+    gap: 2.5rem;
+    margin-right: 3rem;
+    
+}
+.nav-item ul li{
+    list-style: none;
+    
+
+}
+.nav-item ul li a {
+    text-decoration: none;
+    color: #2E4F4F;
+    font-size: x-large;
+}
+.nav-item ul li a:hover{
+    color: #0E8388;
+}
+.side-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10 0 10 rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.side-bar ul{
+    display: flex;
+    flex-direction: column;
+}
+.side-bar li{
+    width: 100%;
+}
+.side-bar a{
+    width: 100%;
+}
+.nav-item img{
+    width: 2vw;
+    align-items: center;
+    margin-top: -0.4rem;
+    
+}
+.side-bar .nav-item img{
+    padding-top: 2rem;
+    /* padding-left: 1rem; */
+}
+.side-bar .nav-item a{
+    padding-left: 1rem;
+}
+
+@media (max-width:800px)  {
+    .hideonmobile{
+        display: none;
+    }
+}
+@media (max-width:300px) {
+    .side-bar{
+        width: 100%;
+    }
+    .nav-item img{
+        padding-top: 1rem;
+    }
+}
+
+
+@media (max-width:800px) {
+    .side-bar .nav-item img{
+       width: 2rem;
+    }   
+    .img img{
+       width: 45vw;
+       margin-left: 0%;
+    }
+    .nav-item img{
+       width: 2rem;
+       padding-top: 1rem;
+    }
+   }
+   
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="img">
+            <img src="logo/pixelcut-export.png" alt="">
+        </div>
+        <div class="nav-item">
+            <ul>
+                <li class="hideonmobile"><a href="index.html" target="_blank">HOME</a></li>
+                <li class="hideonmobile"><a href="#">ABOUT</a></li>
+                <li class="hideonmobile"><a href="#">PRODUCT</a></li>
+                <li class="hideonmobile"><a href="#" target="_blank">CONTACT US</a></li>
+                <li onclick= showsidebar()><a href="#"></a><img src="logo/menu.png" alt=""></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="side-bar">
+        <div class="nav-item">
+            <ul>
+                <li onclick= hidesidebar() ><a href="#"></a><img src="logo/close.png" alt=""></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="html/contact.html" target="_blank">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+  <script>
+    function showsidebar(){
+        const sidebar = document.querySelector('.side-bar')
+        sidebar.style.display = 'flex'
+    }
+    function hidesidebar(){
+         const sidebar = document.querySelector('.side-bar')
+        sidebar.style.display = 'none'
+    }
+  </script>
+</body>
+</html>
