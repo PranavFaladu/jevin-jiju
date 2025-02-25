@@ -77,7 +77,71 @@ nav{
 .side-bar .nav-item a{
     padding-left: 1rem;
 }
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 0rem 12rem;
+    height: 60vh;
+}
+.contacts h2{
+    font-size: 2rem;
+}
+hr{
+    width: 10rem;
+}
+.contacts h1{
+    padding-top: 5rem;
+    font-size: 4rem;
+}
+.contacts h3{
+    padding-top: 1.5rem;
+    font-size: 2.2rem;
+}
+.contact-img img{
+    width: 800px;
+    height: 500px;
+}
+.address{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 60vh;
+    padding: 0rem 7.2rem;
+}
+.address-img img{
+    width: 800px;
+    height: 500px;
+    margin-top: -4.9rem;
+}
+.information{
+    margin-top: -5rem;
+}
+.office h5{
+    font-size: 1.5rem;
+}
+.office p{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+.touch{
+    margin-top: 2rem;
+}
+.touch h4{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 
+}
+.touch h5{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.touch p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
 @media (max-width:800px)  {
     .hideonmobile{
         display: none;
@@ -90,10 +154,20 @@ nav{
     .nav-item img{
         padding-top: 1rem;
     }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .address{
+    display: flex;
+    flex-direction: column;
+    }
+   
 }
 
 
 @media (max-width:800px) {
+ 
     .side-bar .nav-item img{
        width: 2rem;
     }   
@@ -104,6 +178,66 @@ nav{
     .nav-item img{
        width: 2rem;
        padding-top: 1rem;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+        height: 95vh;
+        /* background-color: #2E4F4F; */
+    }
+    .contacts{
+        text-align: center;
+        overflow-y: hidden;
+    }
+     hr{
+        width: 9rem;
+        margin: auto;
+        margin-top: 0.5rem;
+     }
+    .contacts h2{
+        margin-top: 2rem;
+    }
+    .contacts h1{
+        font-size: 3rem;
+        margin-top: -3rem;
+    }
+    .contact-img img{
+        width: 430px;
+        height: 400px;
+        /* width: fit-content; */
+    }
+    .address{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #2E4F4F; */
+    height: 100vh;
+    padding: 0rem 0rem;
+    }
+    .address-img img{
+        width: 430px;
+        height: 400px;
+        margin-top: -0.2rem;
+    }
+    .office h5{
+        margin-left: 0.5rem;
+        font-weight: bolder;
+    }
+    .office p{
+        font-size: 1.3rem;
+        padding: 0rem 1rem;
+        line-height: normal;
+        margin-top: 0.5rem;
+    }
+    .touch h4{
+        margin-left: 0.5rem;
+        font-weight: bolder;
+    }
+    .touch h5{
+        padding: 0rem 1rem;
+    }
+    .touch p{
+        padding: 0rem 1rem;
     }
    }
    
@@ -135,6 +269,56 @@ nav{
             </ul>
         </div>
     </nav>
+
+            <div class="contact">
+                <div class="contacts">
+                    <h2>CONTACT</h2>
+                    <hr>
+                    <h1>NEED ANY HELP?</h1>
+                    <h3>FEEL FREE TO CONTACT US</h3>
+                </div>
+                <div class="contact-img">
+                    <img src="logo/image4.jpg" alt="contact img">
+                </div>
+            </div>
+
+            <div class="address">
+                <div class="address-img">
+                    <img src="logo/image2.jpg" alt="Addressimg">
+                </div>
+                <div class="information">
+                    <div class="office">
+                        <h5>OFFICE :</h5>
+                        <p>Kandla highway way, timdi patia , morbi - 363 642 , Gujarat , India </p>
+                    </div>
+                    <div class="touch">
+                        <h4>TOUCH:</h4>
+                        <h5>+91 9016545875</h5>
+                        <h5>+91 9714209992</h5>
+                        <h4>EMAIL:</h4>
+                        <p>Stonexceramics@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="contactform">
+                <div class="googlemap">
+
+                </div>
+                
+                <div class="form">
+                <label for="">Name</label><br>
+                <input type="text" placeholder="Name"><br>
+                <label for="">Email</label><br>
+                <input type="email" placeholder="Email"><br>
+                <label for="">Phone</label><br>
+                <input type="number" placeholder="Phone"><br>
+                <label for="">Textarea</label><br>
+                <textarea name="texxt" id="text"></textarea><br>
+            </div>
+            </div>
   <script>
     function showsidebar(){
         const sidebar = document.querySelector('.side-bar')
