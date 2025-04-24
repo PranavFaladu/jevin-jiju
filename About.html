@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stonex</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav{
+    height: 13vh;
+    background-color: #CBE4DE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img img {
+    width: 15vw;
+    padding-top: 1rem;
+}
+.nav-item ul{
+    display: flex;
+    gap: 2.5rem;
+    margin-right: 3rem;
+    
+}
+.nav-item ul li{
+    list-style: none;
+    
+
+}
+.nav-item ul li a {
+    text-decoration: none;
+    color: #2E4F4F;
+    font-size: x-large;
+}
+.nav-item ul li a:hover{
+    color: #0E8388;
+}
+.side-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10 0 10 rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.side-bar ul{
+    display: flex;
+    flex-direction: column;
+}
+.side-bar li{
+    width: 100%;
+}
+.side-bar a{
+    width: 100%;
+}
+.nav-item img{
+    width: 2vw;
+    align-items: center;
+    margin-top: -0.4rem;
+    
+}
+.side-bar .nav-item img{
+    padding-top: 2rem;
+    /* padding-left: 1rem; */
+}
+.side-bar .nav-item a{
+    padding-left: 1rem;
+}
+
+@media (max-width:800px)  {
+    .hideonmobile{
+        display: none;
+    }
+}
+@media (max-width:300px) {
+    .side-bar{
+        width: 100%;
+    }
+    .nav-item img{
+        padding-top: 1rem;
+    }
+}
+
+
+@media (max-width:800px) {
+    .side-bar .nav-item img{
+       width: 2rem;
+    }   
+    .img img{
+       width: 45vw;
+       margin-left: 0%;
+    }
+    .nav-item img{
+       width: 2rem;
+       padding-top: 1rem;
+    }
+   }
+   
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: bold;
+      border-bottom: 4px solid #2563eb;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      margin-bottom: 50px;
+    }
+
+    .image-card {
+      flex: 1 1 400px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+    .image-card .caption {
+      background-color: #1f2937;
+      color: #fff;
+      padding: 12px;
+      font-weight: bold;
+    }
+
+    .content {
+      flex: 1 1 400px;
+    }
+
+    .content h3 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .feature-icon {
+      font-size: 26px;
+      color: #2563eb;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .buttons button {
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #1d4ed8;
+    }
+
+    .btn-secondary {
+      border: 1px solid #d1d5db;
+      background-color: white;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f3f4f6;
+    }
+
+    .stats {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .stat-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-box .number {
+      font-size: 28px;
+      color: #2563eb;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .stat-box .label {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .footer {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.footer h3, .footer h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer p, .footer small {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 6px 0;
+}
+
+.footer ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #e2e8f0;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer form {
+  margin-top: 10px;
+}
+
+.footer input[type="email"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 280px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1e293b;
+  color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+.footer button {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  background-color: #2563eb;
+}
+
+/* ✅ Footer bottom section */
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+    
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="img">
+            <img src="logo/pixelcut-export.png" alt="">
+        </div>
+        <div class="nav-item">
+            <ul>
+                <li class="hideonmobile"><a href="index.html">HOME</a></li>
+                <li class="hideonmobile"><a href="About.html">ABOUT</a></li>
+                <li class="hideonmobile"><a href="#">PRODUCT</a></li>
+                <li class="hideonmobile"><a href="contact.html">CONTACT US</a></li>
+                <li onclick= showsidebar()><a href="#"></a><img src="logo/menu.png" alt=""></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="side-bar">
+        <div class="nav-item">
+            <ul>
+                <li onclick= hidesidebar() ><a href="#"></a><img src="logo/close.png" alt=""></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="contact.html" >CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+  <section class="container">
+    <h2>About</h2>
+    <div class="flex">
+      <div class="image-card">
+        <img src="logo/img51.jpg" alt="Tile Company">
+        <div class="caption">Est. 2015</div>
+      </div>
+      <div class="content">
+        <h3>Your Premium Tile Solution</h3>
+        <p>At Text Tiles, we've been transforming spaces with premium quality tiles since 2015. We combine craftsmanship with innovative designs to create products that stand the test of time.</p>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <div>
+              <strong>Premium Quality</strong>
+              <p>We source only the finest materials for durability and aesthetics.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">⏱️</div>
+            <div>
+              <strong>Fast Delivery</strong>
+              <p>Our efficient logistics ensure your tiles arrive on time, every time.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">⚙️</div>
+            <div>
+              <strong>Customizable</strong>
+              <p>Create your perfect space with our tailored design solutions.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">✔️</div>
+            <div>
+              <strong>Expert Support</strong>
+              <p>Our specialists provide guidance from selection to installation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="btn-primary">Browse Products</button>
+          <button class="btn-secondary">Contact Us</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-box">
+        <div class="number">5000+</div>
+        <div class="label">Happy Customers</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">200+</div>
+        <div class="label">Tile Designs</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">15+</div>
+        <div class="label">Years Experience</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">24/7</div>
+        <div class="label">Customer Support</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Text Tiles</h3>
+        <p>Premium quality tiles for all your needs. Transform your space with our exclusive collection.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li>Home</a></li>
+          <li>About</a></li>
+          <li>Products</a></li>
+          <li>Contact</a></li>
+          <li>FAQ</a></li>
+          <li>Privacy Policy</a></li>
+          <li>Terms of Service</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Categories</h4>
+        <ul>
+          <li>Floor Tiles</a></li>
+          <li>Wall Tiles</a></li>
+          <li>Outdoor Tiles</a></li>
+          <li>Decorative Tiles</a></li>
+          <li>Porcelain Tiles</a></li>
+          <li>Ceramic Tiles</a></li>
+          <li>Mosaic Tiles</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to our newsletter for the latest updates, promotions, and design tips.</p>
+        <form>
+          <input type="email" placeholder="Email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <small>We respect your privacy. Unsubscribe at any time.</small>
+      </div>
+    </div>
+  
+    <!-- ✅ Bottom Section -->
+    <div class="footer-bottom">
+      <p>© 2023 Text Tiles. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping Policy</a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script>
+    function showsidebar() {
+      document.querySelector(".side-bar").style.display = "flex";
+    }
+
+    function hidesidebar() {
+      document.querySelector(".side-bar").style.display = "none";
+    }
+  </script>
+</body>
+</html>
