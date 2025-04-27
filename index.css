@@ -24,12 +24,16 @@ nav {
 }
 .nav-item ul li a {
   text-decoration: none;
-  color: #2e4f4f;
+  /* color: #2e4f4f; */
   /* color: whitesmoke; */
+  color: #000;
   font-size: x-large;
 }
 .nav-item ul li a:hover {
-  color: #0e8388;
+  /* color: #0e8388; */
+  /* color: #333; */
+  transform: scale(1);
+  
 }
 .side-bar {
   position: fixed;
