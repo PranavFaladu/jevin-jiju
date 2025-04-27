@@ -4,7 +4,8 @@
 }
 nav {
   height: 13vh;
-  background-color: #cbe4de;
+  /* background-color: #cbe4de; */
+  /* background-color: #333; */
    display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +25,7 @@ nav {
 .nav-item ul li a {
   text-decoration: none;
   color: #2e4f4f;
+  /* color: whitesmoke; */
   font-size: x-large;
 }
 .nav-item ul li a:hover {
