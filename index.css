@@ -31,8 +31,8 @@ nav {
 }
 .nav-item ul li a:hover {
   /* color: #0e8388; */
-  /* color: #333; */
-  transform: scale(1);
+  color: #333;
+  /* transform: scale(1); */
   
 }
 .side-bar {
